@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水底世界生態聚落 - 作品展</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 p5.js 函式庫 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <!-- 引入我們的水底世界背景程式碼 -->
+    <script src="sketch.js"></script>
+</head>
+<body>
+    <!-- p5.js 會將 Canvas 放置在這個容器中作為背景 -->
+    <div id="canvas-container"></div>
+
+    <main>
+        <header>
+            <h1>水底生態聚落展覽</h1>
+        </header>
+        <nav>
+            <!-- 第一週連結您可以替換為實際的第一週網址 -->
+            <button onclick="changeIframe('https://minawu20070717-ux.github.io/0324/')">第一週生態</button>
+            <!-- 第二週連結為您指定的網址 -->
+            <button onclick="changeIframe('https://minawu20070717-ux.github.io/0409/')">第二週生態</button>
+        </nav>
+        <div class="display-area">
+            <iframe id="content-frame" src="https://minawu20070717-ux.github.io/0409/" title="作品展示區"></iframe>
+        </div>
+    </main>
+
+    <script>
+        // 此函式負責將 iframe 的內容切換至指定網址
+        function changeIframe(url) {
+            document.getElementById('content-frame').src = url;
+        }
+    </script>
+</body>
+</html>
